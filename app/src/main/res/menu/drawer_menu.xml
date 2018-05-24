@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_message"
+            android:icon="@drawable/ic_message"
+            android:title="Message" />
+        <item
+            android:id="@+id/nav_basket"
+            android:icon="@drawable/ic_basket"
+            android:title="Basket" />
+        <item
+            android:id="@+id/nav_build"
+            android:icon="@drawable/ic_build"
+            android:title="Build" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_place"
+                android:icon="@drawable/ic_place"
+                android:title="Place" />
+            <item
+                android:id="@+id/nav_timelapse"
+                android:icon="@drawable/ic_timelapse"
+                android:title="Timelapse" />
+        </menu>
+    </item>
+
+</menu>

@@ -6,15 +6,68 @@
     android:padding="16dp"
     android:gravity="center_horizontal">
 
-    <EditText
-        android:id="@+id/edit_text"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Centrum Zaopatrzenia"
+        android:textColor="@color/lightorangedark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:padding="2dp"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ega Premium Kielce"
+        android:textColor="@color/lightorangedark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="285dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="Login"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="286dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Hasło"
+        android:inputType="textPassword"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+         />
+
     <Button
-        android:id="@+id/button_ok"
+        android:id="@+id/bLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ok"/>
+        android:padding="5dp"
+        android:text="ZALOGUJ" />
+
+    <TextView
+        android:id="@+id/tvRegisterHere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bLogin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="286dp"
+        android:layout_marginTop="12dp"
+        android:text="Zarejestruj się"
+        android:textColor="@color/white" />
 
 
 </LinearLayout>
