@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@color/orange"
-    android:orientation="vertical">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.domin.aplikacjasklep.CategoriesActivity"
+        android:orientation="vertical"
+    android:background="@drawable/tlo">
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,6 +18,64 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="39dp">
+
+                <TextView
+                    android:id="@+id/tvKoszyk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="168dp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/ibLogowanie"
+                    app:layout_constraintStart_toEndOf="@+id/ibKoszyk"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:visibility="invisible" />
+
+                <ImageButton
+                    android:id="@+id/ibKoszyk"
+                    android:layout_width="31dp"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="invisible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/koszyk" />
+
+
+                <TextView
+                    android:id="@+id/tvLogowanie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Logowanie"
+                    android:textColor="@color/black2"
+                    android:textStyle="bold"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/ibLogowanie"
+                    android:layout_width="30dp"
+                    android:layout_height="34dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginStart="166dp"
+                    android:layout_marginTop="10dp"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tvLogowanie"
+                    app:layout_constraintStart_toEndOf="@+id/tvKoszyk"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@android:drawable/ic_partial_secure" />
+
+            </android.support.constraint.ConstraintLayout>
 
             <ImageButton
                 android:id="@+id/ibBHP"
@@ -116,5 +176,5 @@
         </LinearLayout>
 
     </ScrollView>
-
 </LinearLayout>
+
