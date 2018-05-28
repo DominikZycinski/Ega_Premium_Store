@@ -86,14 +86,3 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 }
 
-//    @Override
-//    public void onInputASent(CharSequence input) {
-//        fragmentB.updateEditText(input);
-//    }
-
-
-//    @Override
-//    public void onInputBSent(CharSequence input) {
-//        fragmentA.updateEditText(input);
-//    }
-//}
