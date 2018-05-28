@@ -18,4 +18,6 @@ public class Global {
     public static String IdUser;
     public static double cena= 0.0;
 
+    public static String categories;
+
 }

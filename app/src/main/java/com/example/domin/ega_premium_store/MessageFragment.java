@@ -1,5 +1,6 @@
 package com.example.domin.ega_premium_store;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -50,6 +51,7 @@ public class MessageFragment extends Fragment {
 
         bCategories = v.findViewById(R.id.bKategorie);
         ivMotoryzacja = v.findViewById(R.id.ivMotoryzacja);
+        ivKlucze = v.findViewById(R.id.ivKlucze);
 
         bCategories.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,6 +79,14 @@ public class MessageFragment extends Fragment {
             }
         });
 
+        ivKlucze.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Global.categories ="elektronarzedzia";
+                Intent intent = new Intent(getActivity(), Recycler.class);
+                startActivity(intent);
+            }
+        });
         return v;
     }
 
