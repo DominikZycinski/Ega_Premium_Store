@@ -49,9 +49,13 @@ public class MessageFragment extends Fragment {
 
         item_details = new ArrayList<>();
 
+
+
         bCategories = v.findViewById(R.id.bKategorie);
         ivMotoryzacja = v.findViewById(R.id.ivMotoryzacja);
         ivKlucze = v.findViewById(R.id.ivKlucze);
+        ibElektroLogo = v.findViewById(R.id.ibElektroLogo);
+        ibBudowlaneLogo = v.findViewById(R.id.ibBudowlaneLogo);
 
         bCategories.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,6 +87,25 @@ public class MessageFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Global.categories ="elektronarzedzia";
+                Intent intent = new Intent(getActivity(), Recycler.class);
+                startActivity(intent);
+            }
+        });
+
+        ibElektroLogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Global.categories ="elektronarzedzia";
+                Intent intent = new Intent(getActivity(), Recycler.class);
+                startActivity(intent);
+            }
+        });
+
+
+        ibBudowlaneLogo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Global.categories="budowlane";
                 Intent intent = new Intent(getActivity(), Recycler.class);
                 startActivity(intent);
             }
