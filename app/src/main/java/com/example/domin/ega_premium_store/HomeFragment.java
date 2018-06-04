@@ -26,7 +26,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MessageFragment extends Fragment {
+public class HomeFragment extends Fragment {
 
     List<RowItem> item_details;
     //private String TAG = BasketActivity.class.getSimpleName();

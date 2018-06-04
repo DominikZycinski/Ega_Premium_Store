@@ -44,6 +44,7 @@ public class Recycler extends AppCompatActivity {
 
 
     private void parseJSON() {
+//        String url = "https://api.myjson.com/bins/1aowku";
         String url = "https://api.myjson.com/bins/178l9q";
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,

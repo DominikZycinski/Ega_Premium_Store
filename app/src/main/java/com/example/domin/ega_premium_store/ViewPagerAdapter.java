@@ -17,7 +17,7 @@ public class ViewPagerAdapter extends PagerAdapter implements View.OnClickListen
 
     private Context context;
     private LayoutInflater layoutInflater;
-    private Integer [] images = {R.drawable.evento1, R.drawable.evento2, R.drawable.evento3};
+    private Integer [] images = {R.drawable.logo2, R.drawable.logo2, R.drawable.logo2};
     private String[] text;
     private String[] name;
     private String[] date;

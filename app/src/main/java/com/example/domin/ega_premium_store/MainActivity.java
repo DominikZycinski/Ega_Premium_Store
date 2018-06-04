@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if(savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                    new MessageFragment()).commit();
+                    new HomeFragment()).commit();
 
             navigationView.setCheckedItem(R.id.nav_message);
         }
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (item.getItemId()){
             case R.id.nav_message:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new MessageFragment()).commit();
+                        new HomeFragment()).commit();
                 break;
 
             case R.id.nav_build:
@@ -68,7 +68,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         new NewsFragment()).commit();
                 break;
             case R.id.nav_place:
-                Toast.makeText(this,"Place", Toast.LENGTH_SHORT).show();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new MapFragment()).commit();
                 break;
         }
 
@@ -85,5 +86,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
         }
     }
+
+
 }
 
