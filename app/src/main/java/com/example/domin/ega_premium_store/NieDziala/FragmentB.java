@@ -1,4 +1,4 @@
-package com.example.domin.ega_premium_store;
+package com.example.domin.ega_premium_store.NieDziala;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,6 +14,8 @@ import android.widget.TextView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+
+import com.example.domin.ega_premium_store.R;
 
 
 public class FragmentB extends Fragment {

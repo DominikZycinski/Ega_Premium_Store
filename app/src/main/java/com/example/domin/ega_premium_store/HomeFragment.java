@@ -1,7 +1,6 @@
 package com.example.domin.ega_premium_store;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -14,15 +13,9 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-import com.example.domin.ega_premium_store.NieDziala.HttpHandler;
-import com.example.domin.ega_premium_store.NieDziala.ItemFragment;
+import com.example.domin.ega_premium_store.NieDziala.FragmentMotoryzacja;
 import com.example.domin.ega_premium_store.NieDziala.RowItem;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -75,11 +68,14 @@ public class HomeFragment extends Fragment {
         ivMotoryzacja.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment fragment = new FragmentMotoryzacja();
+//                Fragment fragment = new FragmentMotoryzacja();
+//
+//                FragmentManager fragmentManager = getFragmentManager();
+//                fragmentManager.beginTransaction().replace(R.id.fragment_container,fragment)
+//                        .commit();
 
-                FragmentManager fragmentManager = getFragmentManager();
-                fragmentManager.beginTransaction().replace(R.id.fragment_container,fragment)
-                        .commit();
+                Intent intent = new Intent(getActivity(), ViewActivity.class);
+                startActivity(intent);
             }
         });
 

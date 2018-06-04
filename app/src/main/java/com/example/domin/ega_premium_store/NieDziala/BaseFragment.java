@@ -1,8 +1,9 @@
-package com.example.domin.ega_premium_store;
+package com.example.domin.ega_premium_store.NieDziala;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
 
+import com.example.domin.ega_premium_store.NieDziala.NavigationInterface;
 
 
 public class BaseFragment extends Fragment {

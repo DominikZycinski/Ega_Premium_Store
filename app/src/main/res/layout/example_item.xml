@@ -37,6 +37,12 @@
             android:layout_height="wrap_content"
             android:text="TextView" />
 
+        <Button
+            android:id="@+id/b_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DODAJ DO KOSZYKA" />
+
     </LinearLayout>
 
 </android.support.v7.widget.CardView>

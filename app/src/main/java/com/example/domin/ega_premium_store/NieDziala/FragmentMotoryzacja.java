@@ -1,4 +1,4 @@
-package com.example.domin.ega_premium_store;
+package com.example.domin.ega_premium_store.NieDziala;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -15,6 +15,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.domin.ega_premium_store.R;
+import com.example.domin.ega_premium_store.VolleySingleton;
 
 import org.json.JSONArray;
 import org.json.JSONException;

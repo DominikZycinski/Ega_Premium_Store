@@ -1,4 +1,4 @@
-package com.example.domin.ega_premium_store;
+package com.example.domin.ega_premium_store.NieDziala;
 
 import android.app.FragmentManager;
 
