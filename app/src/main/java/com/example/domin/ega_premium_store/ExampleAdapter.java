@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.domin.ega_premium_store.DBFlow.MobUser;
 import com.raizlabs.android.dbflow.sql.language.Delete;
@@ -87,7 +88,7 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleV
 
 
          int count = 1;
-        public ExampleViewHolder(View itemView) {
+        public ExampleViewHolder(final View itemView) {
             super(itemView);
             mImageView = itemView.findViewById(R.id.image_view);
             mTextViewCreator = itemView.findViewById(R.id.text_view_creator);
@@ -136,6 +137,11 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleV
             bAdd.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
+                    Toast.makeText(itemView.getContext(),"Dodano do koszyka",Toast.LENGTH_SHORT ).show();
+
+                    CharSequence text = "Hello toast!";
+
 
                     String x =tvCount.getText().toString();
 

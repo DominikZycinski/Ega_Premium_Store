@@ -84,7 +84,7 @@ public class Recycler extends AppCompatActivity {
 
                             mExampleAdapter = new ExampleAdapter(Recycler.this, mExampleList);
                             mRecyclerView.setAdapter(mExampleAdapter);
-//                            mExampleAdapter.setOnItemClickListener(Recycler.this);
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -98,16 +98,5 @@ public class Recycler extends AppCompatActivity {
         mRequestQueue.add(request);
     }
 
-//    @Override
-//    public void onItemClick(int position) {
-//        Intent detailIntent = new Intent(this, DetailActivity.class);
-//        ExampleItem clickedItem = mExampleList.get(position);
-//
-//        detailIntent.putExtra(EXTRA_URL, clickedItem.getImageUrl());
-//        detailIntent.putExtra(EXTRA_CREATOR, clickedItem.getCreator());
-//        detailIntent.putExtra(EXTRA_LIKES, clickedItem.getLikeCount());
-//
-//        startActivity(detailIntent);
-//
-//    }
+
 }

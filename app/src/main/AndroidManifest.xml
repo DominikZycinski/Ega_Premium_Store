@@ -17,11 +17,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Recycler"></activity>
+        <activity android:name=".Recycler">></activity>
         <activity android:name=".DetailActivity"></activity>
-        <activity android:name=".BasketActivity"></activity>
-        <activity android:name=".ViewActivity"
-            android:screenOrientation="landscape">
+        <activity android:name=".BasketActivity"
+            android:screenOrientation="landscape"></activity>
+        <activity android:name=".ViewActivity">
         </activity>
         <meta-data
             android:name="com.google.android.geo.API_KEY"

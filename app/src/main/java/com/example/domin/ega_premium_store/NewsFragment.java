@@ -22,10 +22,9 @@ public class NewsFragment extends Fragment {
         super.onCreate(savedInstanceState);
         View view = inflater.inflate(R.layout.fragment_news, null);
 
-//        View mainView = getActivity().findViewById(R.id.fragment_name);
+
         TextView txt;
-//        txt= mainView.findViewById(R.id.fragment_name);
-//        txt.setText(R.string.news);
+
 
         String [] name = {"Centrum Zaopatrzenia Ega Premium","Oferta","Autoryzowany Dystrybutor"};
         String [] date = {"","",""};
