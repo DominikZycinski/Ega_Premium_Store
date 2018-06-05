@@ -13,9 +13,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.domin.ega_premium_store.DBFlow.MobUser;
+import com.raizlabs.android.dbflow.sql.language.Delete;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static com.example.domin.ega_premium_store.Recycler.EXTRA_CREATOR;
 import static com.example.domin.ega_premium_store.Recycler.EXTRA_LIKES;
@@ -26,6 +28,7 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleV
     private ArrayList<ExampleItem> mExampleList;
     private OnItemClickListener mListener;
     String text2;
+    int price;
 
     public interface OnItemClickListener {
         void onItemClick(int position);
@@ -56,6 +59,7 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleV
         String desc = currentItem.getDesc();
 
         text2 = creatorName;
+        price = likeCount;
 
         holder.mTextViewCreator.setText(creatorName);
         holder.mTextViewLikes.setText("Cena: " + likeCount +".00 zł");
@@ -75,7 +79,14 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleV
         public TextView mTextViewLikes;
         public TextView mTextDesc;
         public Button bAdd;
+        public Button bIncrease;
+        public Button bDecrease;
+        public Button bClear;
+        public TextView tvCount;
 
+
+
+         int count = 1;
         public ExampleViewHolder(View itemView) {
             super(itemView);
             mImageView = itemView.findViewById(R.id.image_view);
@@ -83,16 +94,65 @@ public class ExampleAdapter extends RecyclerView.Adapter<ExampleAdapter.ExampleV
             mTextViewLikes = itemView.findViewById(R.id.text_view_likes);
             mTextDesc = itemView.findViewById(R.id.tv_desc);
             bAdd = itemView.findViewById(R.id.b_add);
+            bIncrease = itemView.findViewById(R.id.bIncrease);
+            bDecrease = itemView.findViewById(R.id.bDecrease);
+            tvCount = itemView.findViewById(R.id.tvCount);
+//            bClear = itemView.findViewById(R.id.bUsun);
+
+//            bClear.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Delete.table(MobUser.class);
+//                }
+//            });
+
+
+            bDecrease.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if( count>1){
+                        count--;
+                        tvCount.setText(String.valueOf(count));
+
+
+                    }
+                }
+            });
+
+            bIncrease.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    count++;
+                    tvCount.setText(String.valueOf(count));
+
+
+                }
+            });
+
+
+
+
 
             bAdd.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
+                    String x =tvCount.getText().toString();
+
+                    int amount = Integer.parseInt(String.valueOf(x));
+
+                    Global.amount[Global.counter] = amount;
+
+                    Global.counter ++;
+
+                    List<Integer> lista = new ArrayList<Integer>();
+                    lista.add(amount);
+
                     String a= EXTRA_CREATOR;
 
                     int b = 1000;
                     MobUser mUsr = new MobUser();
-                    mUsr.InsertData( text2, b );
+                    mUsr.InsertData( text2, price );
                     mUsr.save();
 
                 }

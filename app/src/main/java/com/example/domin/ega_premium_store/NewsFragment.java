@@ -29,8 +29,7 @@ public class NewsFragment extends Fragment {
 
         String [] name = {"Centrum Zaopatrzenia Ega Premium","Oferta","Autoryzowany Dystrybutor"};
         String [] date = {"","",""};
-        String [] text = {"Cechuje nas doświadczenie, troska o nieustanny rozwój oraz indywidualne podejście do każdego klienta. Oferujemy najwyższe standardy które podtrzymujemy w każdej płaszczyźnie naszych działań. Oferowane artykuły sprzedajemy hurtowo jak i detalicznie. Umożliwiamy możliwość płatności kartą oraz dowozu artykułów.  "+
-                "João Fiadeiro belongs to the generation of choreographers who emerged in the late 1980s, who followed the american “postmodern” movement and the movements of the French and Belgian Nouvelle Danse, gave rise to the New Portuguese Dance\n",
+        String [] text = {"Jesteśmy otwarci od poniedziałku do piątku, w godzinach 8:00-16:00\n\nCechuje nas doświadczenie, troska o nieustanny rozwój oraz indywidualne podejście do każdego klienta. Oferujemy najwyższe standardy które podtrzymujemy w każdej płaszczyźnie naszych działań. Oferowane artykuły sprzedajemy hurtowo jak i detalicznie. Umożliwiamy możliwość płatności kartą oraz dowozu artykułów.  ",
                         "Oferujemy solidne artykuły oraz serwis, który zapewnia wysoki standard dla klientów. W naszym sklepie mają Państwo szeroki wybór artykułów przeznaczonych zarówno do amatorskiego i profesjonalnego użytku w przystępnej cenie i z dopasowanym osprzętem. W naszej ofercie znajdą Państwo sprzęt odpowiedni dla siebie – o właściwym stosunku ceny do jakości i wydajności. ",
                 "Nasze artykuły pochodzą prosto od producenta, dlatego mogą mieć Państwo pewność, że są one oryginalne. Wszystkie produkty są objęte gwarancją producenta oraz serwisem po sprzedażowym. Jesteśmy oficjalnym dystrybutorem marki Ega Premium, Orlen, Higo, Yato, Faster Tools, Draumet, Forester, Tresnar, Hurry Up."};
         Double[] lng={ -8.603674,-8.609465 , -8.661093};

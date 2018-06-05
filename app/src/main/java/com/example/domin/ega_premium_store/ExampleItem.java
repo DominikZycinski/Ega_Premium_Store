@@ -1,6 +1,6 @@
 package com.example.domin.ega_premium_store;
 
-public class ExampleItem {
+public class ExampleItem  {
     private String mImageUrl;
     private String mCreator;
     private int mLikes;
@@ -29,4 +29,6 @@ public class ExampleItem {
     public String getDesc(){
         return mDesc;
     }
+
+
 }

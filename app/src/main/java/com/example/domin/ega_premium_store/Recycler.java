@@ -25,12 +25,13 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class Recycler extends AppCompatActivity implements ExampleAdapter.OnItemClickListener {
+public class Recycler extends AppCompatActivity {
 //
 
     public static final String EXTRA_URL = "imageUrl";
     public static final String EXTRA_CREATOR = "creatorName";
     public static final String EXTRA_LIKES = "likeCount";
+
 
     private RecyclerView mRecyclerView;
     private ExampleAdapter mExampleAdapter;
@@ -57,7 +58,7 @@ public class Recycler extends AppCompatActivity implements ExampleAdapter.OnItem
 
     private void parseJSON() {
 //        String url = "https://api.myjson.com/bins/1aowku";
-        String url = "https://api.myjson.com/bins/178l9q";
+        String url = "https://api.myjson.com/bins/n4qpe";
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
                 new Response.Listener<JSONObject>() {
@@ -83,7 +84,7 @@ public class Recycler extends AppCompatActivity implements ExampleAdapter.OnItem
 
                             mExampleAdapter = new ExampleAdapter(Recycler.this, mExampleList);
                             mRecyclerView.setAdapter(mExampleAdapter);
-                            mExampleAdapter.setOnItemClickListener(Recycler.this);
+//                            mExampleAdapter.setOnItemClickListener(Recycler.this);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -97,16 +98,16 @@ public class Recycler extends AppCompatActivity implements ExampleAdapter.OnItem
         mRequestQueue.add(request);
     }
 
-    @Override
-    public void onItemClick(int position) {
-        Intent detailIntent = new Intent(this, DetailActivity.class);
-        ExampleItem clickedItem = mExampleList.get(position);
-
-        detailIntent.putExtra(EXTRA_URL, clickedItem.getImageUrl());
-        detailIntent.putExtra(EXTRA_CREATOR, clickedItem.getCreator());
-        detailIntent.putExtra(EXTRA_LIKES, clickedItem.getLikeCount());
-
-        startActivity(detailIntent);
-
-    }
+//    @Override
+//    public void onItemClick(int position) {
+//        Intent detailIntent = new Intent(this, DetailActivity.class);
+//        ExampleItem clickedItem = mExampleList.get(position);
+//
+//        detailIntent.putExtra(EXTRA_URL, clickedItem.getImageUrl());
+//        detailIntent.putExtra(EXTRA_CREATOR, clickedItem.getCreator());
+//        detailIntent.putExtra(EXTRA_LIKES, clickedItem.getLikeCount());
+//
+//        startActivity(detailIntent);
+//
+//    }
 }

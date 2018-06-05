@@ -1,5 +1,6 @@
 package com.example.domin.ega_premium_store;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
@@ -19,6 +20,7 @@ public class ViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view);
 
+
         showData = (TextView) findViewById(R.id.showData);
 
 
@@ -31,15 +33,15 @@ public class ViewActivity extends AppCompatActivity {
 
 
 
+        int DBamount;
         String DBname;
         int DBage;
 
         for( MobUser mu : UserList ){
-
             DBname = mu.GetName();
             DBage = mu.GetAge();
 
-            showData.append(DBname +"\t"+DBage+"\n\n" );
+            showData.append("\t"+DBname +"\t"+DBage+"\n\n" );
         }
 
 

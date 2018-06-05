@@ -19,5 +19,8 @@ public class Global {
     public static double cena= 0.0;
 
     public static String categories;
+    public static int amount[] = new int[100];
+    public static  int ilosc = 0;
+    public static int counter = 0;
 
 }

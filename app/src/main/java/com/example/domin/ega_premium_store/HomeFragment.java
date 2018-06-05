@@ -47,8 +47,30 @@ public class HomeFragment extends Fragment {
         bCategories = v.findViewById(R.id.bKategorie);
         ivMotoryzacja = v.findViewById(R.id.ivMotoryzacja);
         ivKlucze = v.findViewById(R.id.ivKlucze);
+        ivWkretaki = v.findViewById(R.id.ivWkretaki);
         ibElektroLogo = v.findViewById(R.id.ibElektroLogo);
         ibBudowlaneLogo = v.findViewById(R.id.ibBudowlaneLogo);
+        ibOgrodoweLogo = v.findViewById(R.id.ibOgrodoweLogo);
+
+
+        ivWkretaki.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Global.categories ="wkretaki";
+                Intent intent = new Intent(getActivity(), Recycler.class);
+                startActivity(intent);
+            }
+        });
+
+        ibOgrodoweLogo.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Global.categories ="ogrodowe";
+                Intent intent = new Intent(getActivity(), Recycler.class);
+                startActivity(intent);
+            }
+        });
+
 
         bCategories.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,21 +90,18 @@ public class HomeFragment extends Fragment {
         ivMotoryzacja.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Fragment fragment = new FragmentMotoryzacja();
-//
-//                FragmentManager fragmentManager = getFragmentManager();
-//                fragmentManager.beginTransaction().replace(R.id.fragment_container,fragment)
-//                        .commit();
 
-                Intent intent = new Intent(getActivity(), ViewActivity.class);
+                Global.categories ="motoryzacja";
+                Intent intent = new Intent(getActivity(), Recycler.class);
                 startActivity(intent);
+
             }
         });
 
         ivKlucze.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Global.categories ="elektronarzedzia";
+                Global.categories ="klucze";
                 Intent intent = new Intent(getActivity(), Recycler.class);
                 startActivity(intent);
             }
